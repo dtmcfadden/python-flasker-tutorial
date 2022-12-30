@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Hellow World!</h1>
+
+<p>This is my first webpage!</p>
+
+<p>Isn't this cool</p>
+
+<p>My name is {{first_name}}</p>
+
+<div>safe capitalize lower upper title trim striptags</div>
+
+<div>{{stuff|safe}}</div>
+<div>{{stuff|striptags}}</div>
+<div>{{stuff|title}}</div>
+
+<h3>Favorite Pizza:</h3>
+<div>{{favorite_pizza}}</div>
+
+{% for topping in favorite_pizza %} {% if topping == 41 %} {{ topping + 100 }} {% else %} {{ topping }}<br />
+{% endif %} {% endfor %}
+
+<br /><br />
+<div>{{ favorite_pizza.0}}</div>
+<div>{{ favorite_pizza.2}}</div>
+<div>{{ favorite_pizza.2 + 10}}</div>
+
+{% endblock %}
